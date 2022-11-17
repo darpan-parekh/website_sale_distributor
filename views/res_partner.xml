@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <data>
+        <record id="res_partner_web_destributor_view" model="ir.ui.view">
+            <field name="name">res.partner.web.destributor.view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="priority" eval="3"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                    <br/>
+                    <field name="is_destributor"/>
+                    <field name="is_default_destributor"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
